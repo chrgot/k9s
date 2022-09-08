@@ -1,0 +1,14 @@
+---
+version: "3"
+
+services:
+
+  k9s:
+    container_name: "k9s"
+    build: .
+    volumes:
+      - gcloud-secrets:/root/.config/gcloud
+      
+volumes:
+  gcloud-secrets:
+    external: true
