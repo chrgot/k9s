@@ -6,6 +6,7 @@ services:
   k9s:
     container_name: "k9s"
     build: .
+    restart: always
     volumes:
       - gcloud-secrets:/root/.config/gcloud
       
